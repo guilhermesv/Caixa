@@ -17,7 +17,7 @@
       </ul>
     </div>
     <header>
-      <img src="assets/trinca.png" alt="trinca.net">
+      
     </header>
   </div>
   
