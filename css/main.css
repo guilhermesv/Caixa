@@ -28,6 +28,10 @@ html, body {
   list-style: none;
 }
 
+.midia-grid li {
+
+}
+
 .midia-grid li:nth-child(2n) {
   align-self: center;
 }
@@ -36,9 +40,14 @@ html, body {
   align-self: flex-end;
 }
 
+.item-video video {
+  max-height: 712px;
+}
+
 img {
-  display: block;
+  height: auto;
   z-index: 1;
+  display: block;
 }
 
 audio, video {

@@ -13,13 +13,13 @@ function centralizar() {
   window.scrollTo(scroll_x, scroll_y);
 }
 
-function definir_fundo() {
-  let caixa = document.getElementById("caixa");
-  let imagens = document.querySelectorAll('img');
-  let imagem_index = Math.floor(Math.random() * imagens.length);
-  let imagem_url =  imagens[imagem_index].getAttribute("src");
-  let css = `background-image: url(${imagem_url})`;
-  caixa.setAttribute("style", css);
-  console.log(imagem_index);
+// function definir_fundo() {
+//   let caixa = document.getElementById("caixa");
+//   let imagens = document.querySelectorAll('img');
+//   let imagem_index = Math.floor(Math.random() * imagens.length);
+//   let imagem_url =  imagens[imagem_index].getAttribute("src");
+//   let css = `background-image: url(${imagem_url})`;
+//   caixa.setAttribute("style", css);
+//   console.log(imagem_index);
   
-}
+// }
