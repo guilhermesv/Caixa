@@ -5,6 +5,7 @@ function criar_galeria($dir) {
   $midias = scandir($dir);
   shuffle($midias);
 
+
   foreach ($midias as $midia) {
     if (!in_array($midia, array('.', '..'))) {
       $tipo = pathinfo($midia, PATHINFO_EXTENSION);
@@ -46,7 +47,12 @@ function criar_galeria($dir) {
     }
   }
 
+  
   echo $arquivo_conteudo;
 }
 
-criar_galeria('midias/');
+?>
+
+
+
+<?php criar_galeria('midias/'); ?>

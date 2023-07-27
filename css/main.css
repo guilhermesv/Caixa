@@ -34,6 +34,14 @@ html, body {
   list-style: none;
 }
 
+.midia-grid li:nth-child(2n) {
+  align-self: center;
+}
+
+.midia-grid li:nth-child(3n) {
+  align-self: flex-end;
+}
+
 .camada_base {
   flex-direction: row-reverse;
   filter: blur(20px);
