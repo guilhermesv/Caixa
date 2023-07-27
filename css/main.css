@@ -18,12 +18,6 @@ html, body {
   background-color: #000;
 }
 
-.camada_base,
-.camada_topo {
-  
-  text-align: center;
-}
-
 .midia-grid {
   width: 100%;
   display: flex;
@@ -42,10 +36,6 @@ html, body {
   align-self: flex-end;
 }
 
-.camada_base {
-  flex-direction: row-reverse;
-  filter: blur(20px);
-}
 
 img {
   display: block;

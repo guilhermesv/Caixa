@@ -11,7 +11,7 @@
 <body>
 
   <div id="caixa" class="site">
-    <div class="camada_topo">
+    
       <ul class="midia-grid">
         <?php include("galeria.php"); ?>
       </ul>
@@ -19,6 +19,6 @@
     <header>
       
     </header>
-  </div>
+  
 </body>
 </html>
