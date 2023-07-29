@@ -18,11 +18,11 @@ function criar_galeria($dir) {
         $padding = rand(0, 100);
 
         $src = 'src="' . $dir . $midia . '" ';
-        $medidas = 'width="' . $largura . 'px" height="' . $imagem_altura . 'px" ';
+        $medidas = 'width="' . $imagem_largura . 'px" height="' . $imagem_altura . 'px" ';
         $style = 'style="padding: ' . $padding . 'px"';
                 
         $arquivo_conteudo .= '<li class="item-imagem"'. $style . '>';
-        $arquivo_conteudo .= '<img ' . $src . $medidas . 'loading="lazy"/>';
+        $arquivo_conteudo .= '<img ' . $src . $medidas . ' draggable="false" loading="lazy"/>';
         $arquivo_conteudo .= '</li">';
       }
 

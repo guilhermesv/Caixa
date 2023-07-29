@@ -1,8 +1,7 @@
 html, body {
-  width: 200vw;
   height: 100%;
   margin: 0;
-  padding: 0;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -14,18 +13,23 @@ html, body {
 
 .site {
   width: 100%;
-  position: relative;
-  background-color: #000;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+  cursor: -webkit-grab;
+  user-select: none; /* Impede a seleção de texto durante o arraste */
 }
 
 .midia-grid {
-  width: 100%;
+  width: 200vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
   margin: 0;
   list-style: none;
+  background-image: url('../assets/fundo.jpg');
+  background-size: cover;
 }
 
 .midia-grid li {
