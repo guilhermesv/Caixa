@@ -12,7 +12,7 @@
 
   <div id="caixa" class="site">
     
-      <ul class="midia-grid">
+      <ul id="midias" class="midia-grid">
         <?php include("galeria.php"); ?>
       </ul>
     </div>

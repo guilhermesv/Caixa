@@ -21,9 +21,10 @@ function definir_fundo() {
   
 }
 
-var myPage = document.getElementById('caixa');
-var isDragging = false;
-var startX, startY, scrollLeft, scrollTop, zoomLevel = 1;
+let myPage = document.getElementById('caixa');
+let content = document.getElementById('midias');
+let isDragging = false;
+let startX, startY, scrollLeft, scrollTop, startZoom = 1;
 
 myPage.addEventListener('mousedown', function(e) {
   isDragging = true;
@@ -38,10 +39,10 @@ myPage.addEventListener('mousedown', function(e) {
 
 document.addEventListener('mousemove', function(e) {
   if (!isDragging) return;
-  var x = e.clientX;
-  var y = e.clientY;
-  var walkX = (x - startX) * 1.5;
-  var walkY = (y - startY) * 1.5;
+  let x = e.clientX;
+  let y = e.clientY;
+  let walkX = (x - startX) * 1.5;
+  let walkY = (y - startY) * 1.5;
   myPage.scrollLeft = scrollLeft - walkX;
   myPage.scrollTop = scrollTop - walkY;
 });
@@ -51,17 +52,4 @@ document.addEventListener('mouseup', function() {
   
   myPage.style.cursor = 'grab';
   myPage.style.cursor = '-webkit-grab';
-});
-
-myPage.addEventListener('wheel', function(e) {
-  e.preventDefault();
-  var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-  var zoomStep = 0.1;
-  var zoomValue = zoomLevel + delta * zoomStep;
-
-  // Limita o zoom para que não fique muito pequeno ou muito grande
-  if (zoomValue >= 0.5 && zoomValue <= 3) {
-    zoomLevel = zoomValue;
-    myPage.style.transform = `scale(${zoomLevel})`;
-  }
 });

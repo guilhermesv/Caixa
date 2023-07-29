@@ -17,7 +17,8 @@ html, body {
   overflow: hidden;
   cursor: grab;
   cursor: -webkit-grab;
-  user-select: none; /* Impede a seleção de texto durante o arraste */
+  user-select: none; 
+  
 }
 
 .midia-grid {
@@ -28,7 +29,6 @@ html, body {
   padding: 0;
   margin: 0;
   list-style: none;
-  background-image: url('../assets/fundo.jpg');
   background-size: cover;
 }
 
