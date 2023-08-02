@@ -1,12 +1,16 @@
 function centralizar() {
   let caixa = document.getElementById("caixa");
+  let midias = document.getElementById("midias");
+  let midias_width = midias.offsetWidth;
+  let midias_height = midias.offsetHeight;
+  console.log(midias_height);
   let caixa_width = caixa.offsetWidth;
   let caixa_height = caixa.offsetHeight;
-  let window_width = window.innerWidth;
-  let window_height = window.innerHeight;
-  let scroll_x = caixa_width / 2 - window_width / 2;
-  let scroll_y = caixa_height / 2 - window_height / 2;
-  window.scrollTo(scroll_x, scroll_y);
+  let scroll_x = midias_width / 2 - caixa_width / 2;
+  let scroll_y = midias_height / 2 - caixa_height / 2;
+  caixa.scrollTop = scroll_y;
+  caixa.scrollLeft = scroll_x;
+  console.log(scroll_x, scroll_y);
 }
 centralizar();
 
@@ -24,7 +28,7 @@ function definir_fundo() {
 let myPage = document.getElementById('caixa');
 let content = document.getElementById('midias');
 let isDragging = false;
-let startX, startY, scrollLeft, scrollTop, startZoom = 1;
+let startX, startY, scrollLeft, scrollTop;
 
 myPage.addEventListener('mousedown', function(e) {
   isDragging = true;

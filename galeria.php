@@ -12,16 +12,16 @@ function criar_galeria($dir) {
 
       if (in_array($tipo, array('jpg', 'png', 'gif', 'jpeg'))) {
         list($imagem_largura, $imagem_altura) = getimagesize($dir . $midia);
-        $porcentagem = rand(40, 60) / 100;
-        $largura = $imagem_largura * $porcentagem;
-        $altura = $imagem_altura * $porcentagem;
+        $porcentagem = rand(50, 100);
+        // $largura = $imagem_largura * $porcentagem;
+        // $altura = $imagem_altura * $porcentagem;
         $padding = rand(0, 100);
 
         $src = 'src="' . $dir . $midia . '" ';
         $medidas = 'width="' . $imagem_largura . 'px" height="' . $imagem_altura . 'px" ';
-        $style = 'style="padding: ' . $padding . 'px"';
+        $style = 'style="max-width: ' . $porcentagem . '%"';
                 
-        $arquivo_conteudo .= '<li class="item-imagem"'. $style . '>';
+        $arquivo_conteudo .= '<li class="item-imagem"' . $style . '>';
         $arquivo_conteudo .= '<img ' . $src . $medidas . ' draggable="false" loading="lazy"/>';
         $arquivo_conteudo .= '</li">';
       }
@@ -38,12 +38,11 @@ function criar_galeria($dir) {
         }
         $arquivo_conteudo .= '</audio>';
         $arquivo_conteudo .= '</li">';
-        $arquivo_conteudo .= '\n';
       }
       
       if ($tipo == 'mov' || $tipo == 'mp4') {
         $arquivo_conteudo .= '<li class="item-video">';
-        $arquivo_conteudo .= '<video controls>';
+        $arquivo_conteudo .= '<video controls >';
         if ($tipo == 'mp4') { 
           $arquivo_conteudo .= '<source src="' . $dir . $midia . '" type="video/mp4">';
         }
