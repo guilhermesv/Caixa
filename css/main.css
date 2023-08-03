@@ -18,6 +18,12 @@ html, body {
   cursor: grab;
   cursor: -webkit-grab;
   user-select: none; 
+  transition: all 1s ease-out;
+}
+
+.carregando {
+  opacity: 0;
+  
 }
 
 .midia-grid {
@@ -52,10 +58,11 @@ img {
   height: auto;
   z-index: 1;
   display: block;
+  background-color: red;
 }
 
 audio, video {
-  z-index: 2000;
+  background-color: blue;
 }
 
 header {

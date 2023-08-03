@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,18 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="js/main.js" defer></script>
   <title>t.r.i.n.c.a.</title>
+  <?php 
+  
+  $cores = ["#00c853", "#ff8a80", "#fff000"];
+  $cor_selecionada = $cores[rand(0,2)];
+
+  echo '<style>body {background-color: ' . $cor_selecionada . '; }</style>';
+
+  ?>
 </head>
 <body>
 
-  <div id="caixa" class="site">
+  <div id="caixa" class="site carregando">
     
       <ul id="midias" class="midia-grid">
         <?php include("galeria.php"); ?>
