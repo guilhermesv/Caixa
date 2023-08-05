@@ -2,13 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   overflow: hidden;
-}
-
-@media screen and (max-width: 600px) {
-  html, body {
-    width: 600vw;
-    height: 100%;
-  }
+  font-family: sans-serif;
 }
 
 .site {
@@ -22,8 +16,15 @@ html, body {
 }
 
 .carregando {
-  opacity: 0;
   
+  background-image: url('../assets/carregando.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carregando .midia-grid {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .midia-grid {
@@ -37,8 +38,18 @@ html, body {
   background-size: cover;
 }
 
-.midia-grid li {
 
+.midia-grid li {
+  background-color: black;
+}
+
+.midia-grid li > * {
+  opacity: 0;
+}
+
+.midia-grid li > *:hover,
+.midia-grid li.visivel > *{
+  opacity: 1;
 }
 
 .midia-grid li:nth-child(2n) {
@@ -49,20 +60,28 @@ html, body {
   align-self: flex-end;
 }
 
-.item-video {
-  max-height: 712px;
+.midia-grid .item-texto {
+  text-transform: uppercase;
+  font-size: 4rem;
+  background-color: transparent;
 }
+
+@media screen and (max-width: 600px) {
+  .midia-grid  {
+    width: 600vw;
+  }
+
+  .midia-grid li {
+    max-width: 50vw;
+  }
+}
+
 
 img {
   width: 100%;
   height: auto;
   z-index: 1;
   display: block;
-  background-color: red;
-}
-
-audio, video {
-  background-color: blue;
 }
 
 header {
@@ -71,4 +90,13 @@ header {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+#contador {
+  position: fixed;
+  text-align: right;
+  font-size: 10rem;
+  bottom: 1rem;
+  right: 1rem;
+  width: 100%;
 }

@@ -1,5 +1,18 @@
 <?php
 
+function criar_texto($texto) {
+  $texto = explode(' ', $texto);
+  $arquivo_conteudo = '';
+
+  foreach ($texto as $palavra) {
+    $arquivo_conteudo .= '<li class="item-texto">';
+    $arquivo_conteudo .= $palavra;
+    $arquivo_conteudo .= '</li>';
+  }
+  echo $arquivo_conteudo;
+} 
+
+
 function criar_galeria($dir) {
   $arquivo_conteudo = '';
   $midias = scandir($dir);
@@ -58,4 +71,5 @@ function criar_galeria($dir) {
 
 ?>
 
+<?php criar_texto('Caixa é uma caverna de encontros enviados pelo acaso certo.'); ?>
 <?php criar_galeria('midias/'); ?>
