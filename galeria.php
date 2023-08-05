@@ -52,7 +52,7 @@ function criar_galeria($dir) {
       
       if ($tipo == 'mov' || $tipo == 'mp4') {
         $arquivo_conteudo .= '<li class="item-video">';
-        $arquivo_conteudo .= '<video width="270" height="480"controls >';
+        $arquivo_conteudo .= '<video width="423" controls >';
         if ($tipo == 'mp4') { 
           $arquivo_conteudo .= '<source src="' . $dir . $midia . '" type="video/mp4">';
         }

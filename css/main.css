@@ -16,7 +16,6 @@ html, body {
 }
 
 .carregando {
-  
   background-image: url('../assets/carregando.gif');
   background-position: center;
   background-repeat: no-repeat;
@@ -66,22 +65,16 @@ html, body {
   background-color: transparent;
 }
 
-@media screen and (max-width: 600px) {
-  .midia-grid  {
-    width: 600vw;
-  }
-
-  .midia-grid li {
-    max-width: 50vw;
-  }
-}
-
-
-img {
+.midia-grid li img {
   width: 100%;
   height: auto;
   z-index: 1;
   display: block;
+}
+
+.midia-grid li video {
+  width: 100%;
+  max-width: 423px;
 }
 
 header {
@@ -94,9 +87,29 @@ header {
 
 #contador {
   position: fixed;
+  pointer-events: none;
   text-align: right;
   font-size: 10rem;
   bottom: 1rem;
   right: 1rem;
   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .midia-grid  {
+    width: 600vw;
+  }
+
+  .midia-grid .item-video,
+  .midia-grid .item-imagem {
+    max-width: 50vw;
+  }
+
+  .midia-grid .item-texto {
+    font-size: 3rem;
+  }
+
+  #contador {
+    font-size: 5rem;
+  }
 }

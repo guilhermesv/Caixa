@@ -1,6 +1,5 @@
-window.addEventListener('load', function() {
-  // Todos os recursos externos e conteúdo da página foram carregados
-  console.log('Todos os recursos externos e conteúdo carregados.');
+window.addEventListener("load", function () {
+  console.log("Todos os recursos externos e conteúdo carregados.");
   drag_inicializar();
   interacao();
   centralizar();
@@ -21,22 +20,22 @@ function centralizar() {
 }
 
 function drag_inicializar() {
-  let myPage = document.getElementById('caixa');
+  let myPage = document.getElementById("caixa");
   let isDragging = false;
   let startX, startY, scrollLeft, scrollTop;
 
-  myPage.addEventListener('mousedown', function (e) {
+  myPage.addEventListener("mousedown", function (e) {
     isDragging = true;
     startX = e.clientX;
     startY = e.clientY;
     scrollLeft = myPage.scrollLeft;
     scrollTop = myPage.scrollTop;
 
-    myPage.style.cursor = 'grabbing';
-    myPage.style.cursor = '-webkit-grabbing';
+    myPage.style.cursor = "grabbing";
+    myPage.style.cursor = "-webkit-grabbing";
   });
 
-  document.addEventListener('mousemove', function (e) {
+  document.addEventListener("mousemove", function (e) {
     if (!isDragging) return;
     let x = e.clientX;
     let y = e.clientY;
@@ -46,70 +45,49 @@ function drag_inicializar() {
     myPage.scrollTop = scrollTop - walkY;
   });
 
-  document.addEventListener('mouseup', function () {
+  document.addEventListener("mouseup", function () {
     isDragging = false;
 
-    myPage.style.cursor = 'grab';
-    myPage.style.cursor = '-webkit-grab';
+    myPage.style.cursor = "grab";
+    myPage.style.cursor = "-webkit-grab";
   });
 }
 
-
-
-let contador = 0;
-const contador_div = document.getElementById('contador');
-const total = 159;
-
 function interacao() {
-  
-  const imagens = document.querySelectorAll('.midia-grid li');
-  
-  
+  const imagens = document.querySelectorAll(".midia-grid li");
+  let contador = 0;
+  const contador_div = document.getElementById("contador");
+  const total = imagens.length;
+
   for (const img of imagens) {
+    
+    img.addEventListener("touchstart", function (event) {
+      const touchX = event.touches[0].clientX;
+      const touchY = event.touches[0].clientY;
 
-    img.addEventListener('touchstart', handleTouch);
+      const elementoRect = img.getBoundingClientRect();
+      const elementoX = elementoRect.left;
+      const elementoY = elementoRect.top;
 
-    img.addEventListener('mouseover', function () {
-      if( !img.classList.contains('visivel')) {
+      const elementoWidth = img.offsetWidth;
+      const elementoHeight = img.offsetHeight;
+
+      if (touchX >= elementoX && touchX <= elementoX + elementoWidth && touchY >= elementoY && touchY <= elementoY + elementoHeight) {
+        if (!img.classList.contains("visivel")) {
+          contador++;
+          contador_div.innerText = contador + "/" + total;
+          img.classList.add("visivel");
+        }
+      }
+    });
+
+    img.addEventListener("mouseover", function () {
+      if (!img.classList.contains("visivel")) {
         contador++;
         contador_div.innerText = contador + "/" + total;
-        img.classList.add('visivel');
+        img.classList.add("visivel");
       }
-      
     });
-  }
-}
 
-// Função para tratar o toque
-function handleTouch(event) {
-  // Evita que outros eventos sejam acionados no elemento
-  // event.preventDefault();
-
-  // Obtém a posição do toque em relação à janela
-  const touchX = event.touches[0].clientX;
-  const touchY = event.touches[0].clientY;
-
-  // Obtém as coordenadas do elemento em relação à janela
-  const elementoRect = this.getBoundingClientRect();
-  const elementoX = elementoRect.left;
-  const elementoY = elementoRect.top;
-
-  // Obtém as dimensões do elemento
-  const elementoWidth = this.offsetWidth;
-  const elementoHeight = this.offsetHeight;
-
-  // Verifica se o toque ocorreu dentro do elemento
-  if (
-    touchX >= elementoX &&
-    touchX <= elementoX + elementoWidth &&
-    touchY >= elementoY &&
-    touchY <= elementoY + elementoHeight
-  ) {
-    console.log("elemento tocado")
-    if( !this.classList.contains('visivel')) {
-      contador++;
-      contador_div.innerText = contador + "/" + total;
-      this.classList.add('visivel');
-    }
   }
 }
