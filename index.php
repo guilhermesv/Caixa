@@ -21,8 +21,35 @@
 <body>
 
   <div id="caixa" class="site carregando">
-      <div id="contador">
-
+      <div class="informacoes">
+        <div class="descricao">
+          <span>caixa</span>
+          <span>é</span>
+          <span>uma</span>
+          <span>caverna</span>
+          <span>de</span>
+          <span>encontros</span>
+          <span>enviados</span>
+          <span>pelo</span>
+          <span>acaso</span>
+        </div>
+        <div class="contador">
+          <span>0</span>
+          <span>0</span>
+          <span>0</span>
+          <span>/</span>
+          <span>1</span>
+          <span>5</span>
+          <span>9</span>
+        </div>
+        <div class="trinca">
+          <span>t</span>
+          <span>r</span>
+          <span>i</span>
+          <span>n</span>
+          <span>c</span>
+          <span>a</span>
+        </div>
       </div>
       <ul id="midias" class="midia-grid">
         <?php include("galeria.php"); ?>

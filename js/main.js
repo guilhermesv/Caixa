@@ -55,9 +55,9 @@ function drag_inicializar() {
 
 function interacao() {
   const imagens = document.querySelectorAll(".midia-grid li");
-  let contador = 0;
-  const contador_div = document.getElementById("contador");
-  const total = imagens.length;
+  // let contador = 0;
+  // const contador_div = document.getElementById("contador");
+  // const total = imagens.length;
 
   for (const img of imagens) {
     
@@ -74,8 +74,8 @@ function interacao() {
 
       if (touchX >= elementoX && touchX <= elementoX + elementoWidth && touchY >= elementoY && touchY <= elementoY + elementoHeight) {
         if (!img.classList.contains("visivel")) {
-          contador++;
-          contador_div.innerText = contador + "/" + total;
+          // contador++;
+          // contador_div.innerText = contador + "/" + total;
           img.classList.add("visivel");
         }
       }
@@ -83,8 +83,8 @@ function interacao() {
 
     img.addEventListener("mouseover", function () {
       if (!img.classList.contains("visivel")) {
-        contador++;
-        contador_div.innerText = contador + "/" + total;
+        // contador++;
+        // contador_div.innerText = contador + "/" + total;
         img.classList.add("visivel");
       }
     });

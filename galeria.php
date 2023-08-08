@@ -71,5 +71,4 @@ function criar_galeria($dir) {
 
 ?>
 
-<?php criar_texto('Caixa é uma caverna de encontros enviados pelo acaso certo.'); ?>
 <?php criar_galeria('midias/'); ?>

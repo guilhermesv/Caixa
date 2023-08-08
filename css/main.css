@@ -113,3 +113,128 @@ header {
     font-size: 5rem;
   }
 }
+
+
+.informacoes {
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  /* mix-blend-mode: difference; */
+  color: #fff;
+}
+
+.informacoes .descricao,
+.informacoes .trinca {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 
+  "a b c d e"
+  "f g h i j"
+  "k l m n o";
+}
+
+.informacoes span{
+  padding: 1rem;
+  display: block;
+}
+
+.informacoes .descricao span:nth-child(1) {
+  grid-area: a;
+  text-align: left;
+}
+
+.informacoes .descricao span:nth-child(2) {
+  grid-area: c;
+  text-align: center;
+}
+
+.informacoes .descricao span:nth-child(3) {
+  grid-area: e;
+  text-align: right;
+}
+
+.informacoes .descricao span:nth-child(4) {
+  grid-area: f;
+  text-align: left;
+  align-self: center;
+}
+
+.informacoes .descricao span:nth-child(5) {
+  grid-area: h;
+  text-align: center;
+  align-self: center;
+}
+
+.informacoes .descricao span:nth-child(6) {
+  grid-area: j;
+  text-align: right;
+  align-self: center;
+}
+
+.informacoes .descricao span:nth-child(7) {
+  grid-area: k;
+  text-align: left;
+  align-self: end;
+}
+
+.informacoes .descricao span:nth-child(8) {
+  grid-area: m;
+  text-align: center;
+  align-self: end;
+}
+
+.informacoes .descricao span:nth-child(9) {
+  grid-area: o;
+  text-align: right;
+  align-self: end;
+}
+
+.informacoes .trinca span:nth-child(1) {
+  grid-area: b;
+  text-align: center;
+}
+
+.informacoes .trinca span:nth-child(2) {
+  grid-area: d;
+  text-align: center;
+}
+
+.informacoes .trinca span:nth-child(3) {
+  grid-area: g;
+  text-align: center;
+  align-self: center;
+}
+
+.informacoes .trinca span:nth-child(4) {
+  grid-area: i;
+  text-align: center;
+  align-self: center;
+}
+
+.informacoes .trinca span:nth-child(5) {
+  grid-area: l;
+  text-align: center;
+  align-self: end;
+}
+
+.informacoes .trinca span:nth-child(6) {
+  grid-area: n;
+  text-align: center;
+  align-self: end;
+}
+
+
+.informacoes .contador  {
+  display: none;
+}
