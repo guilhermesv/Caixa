@@ -1,3 +1,28 @@
+function carregando() {
+  let imagens_total = 0;
+  var imagens_carregadas = 0;
+
+  //a function to execute when each image is loaded ("event handler")
+  function imagem_carregada() {
+      imagens_carregadas++;
+      contagem_atualizar();
+  }
+
+  //a function which updates your message in the page
+  function contagem_atualizar() {
+      var status = document.querySelectorAll("#carregando_status div")[1];
+      status.innerHTML = String(imagens_carregadas).padStart(3, '0') + ' /' + imagens_total;
+  }
+
+  //get # of images on page and attach the OnLoad event handler
+  var imagens = document.getElementsByTagName('img');
+  imagens_total = imagens.length;
+  for(var i=0;i<imagens.length;i++) {
+    imagens[i].onload = imagem_carregada;
+  }
+}
+carregando();
+
 window.addEventListener("load", function () {
   console.log("Todos os recursos externos e conteúdo carregados.");
   letras();

@@ -15,10 +15,29 @@ html, body {
   transition: all 1s ease-out;
 }
 
-.carregando {
-  background-image: url('../assets/carregando.gif');
-  background-position: center;
-  background-repeat: no-repeat;
+
+.carregando-tela {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carregando .carregando-tela {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carregando-tela .carregando-status {
+  text-align: center;
+}
+
+.carregando-tela .carregando-status .trevo {
+  font-size: 2rem;
 }
 
 .carregando .midia-grid {
@@ -94,14 +113,6 @@ header {
   .midia-grid .item-imagem {
     max-width: 50vw;
   }
-
-  .midia-grid .item-texto {
-    font-size: 3rem;
-  }
-
-  #contador {
-    font-size: 5rem;
-  }
 }
 
 
@@ -114,7 +125,6 @@ header {
   top: 0;
   font-size: 1rem;
   text-transform: uppercase;
-  /* mix-blend-mode: difference; */
   color: #fff;
 }
 
@@ -135,6 +145,14 @@ header {
   "A2 B2 C2 D2 E2"
   "A3 B3 C3 D3 E3"
   "A4 B4 C4 D4 E4";
+}
+
+.carregando .informacoes {
+  opacity: 0;
+}
+
+.informacoes {
+  transition: opacity ease-in 1s;
 }
 
 .informacoes span{
@@ -196,7 +214,7 @@ header {
 }
 
 .informacoes .trinca img {
-  width: 30%;
+  width: 2rem;
   max-width: 100%;
 }
 

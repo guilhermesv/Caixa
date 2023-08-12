@@ -19,40 +19,41 @@
   ?>
 </head>
 <body>
-
   <div id="caixa" class="site carregando">
-      <div class="informacoes">
-        <div class="descricao">
-          <span>caixa</span>
-          <span>é</span>
-          <span>uma</span>
-          <span>caverna</span>
-          <span>de</span>
-          <span>encontros</span>
-          <span>enviados</span>
-          <span>pelo</span>
-          <span>acaso</span>
-        </div>
-        <div id="trinca" class="trinca">
-          <span><img src="assets/1T.png" alt="t"></span>
-          <span><img src="assets/1R.png" alt="r"></span>
-          <span><img src="assets/1I.png" alt="i"></span>
-          <span><img src="assets/1N.png" alt="n"></span>
-          <span><img src="assets/1C.png" alt="c"></span>
-          <span><img src="assets/1A.png" alt="a"></span>
-        </div>
-        <div id="contador" class="contador">
-          <span>000</span>
-          <span>159</span>
-        </div>
+    <div class="carregando-tela">
+      <div id="carregando_status" class="carregando-status">
+        <div class="trevo">🍀</div>
+        <div>oi</div>
       </div>
-      <ul id="midias" class="midia-grid">
-        <?php include("galeria.php"); ?>
-      </ul>
     </div>
-    <header>
-      
-    </header>
-    
+    <div class="informacoes">
+      <div class="descricao">
+        <span>caixa</span>
+        <span>é</span>
+        <span>uma</span>
+        <span>caverna</span>
+        <span>de</span>
+        <span>encontros</span>
+        <span>enviados</span>
+        <span>pelo</span>
+        <span>acaso</span>
+      </div>
+      <div id="trinca" class="trinca">
+        <span><img src="assets/1T.png" alt="t"></span>
+        <span><img src="assets/1R.png" alt="r"></span>
+        <span><img src="assets/1I.png" alt="i"></span>
+        <span><img src="assets/1N.png" alt="n"></span>
+        <span><img src="assets/1C.png" alt="c"></span>
+        <span><img src="assets/1A.png" alt="a"></span>
+      </div>
+      <div id="contador" class="contador">
+        <span>000</span>
+        <span>159</span>
+      </div>
+    </div>   
+    <ul id="midias" class="midia-grid">
+      <?php include("galeria.php"); ?>
+    </ul>
+  </div>
 </body>
 </html>
