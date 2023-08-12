@@ -33,22 +33,17 @@
           <span>pelo</span>
           <span>acaso</span>
         </div>
-        <div class="contador">
-          <span>0</span>
-          <span>0</span>
-          <span>0</span>
-          <span>/</span>
-          <span>1</span>
-          <span>5</span>
-          <span>9</span>
+        <div id="trinca" class="trinca">
+          <span><img src="assets/1T.png" alt="t"></span>
+          <span><img src="assets/1R.png" alt="r"></span>
+          <span><img src="assets/1I.png" alt="i"></span>
+          <span><img src="assets/1N.png" alt="n"></span>
+          <span><img src="assets/1C.png" alt="c"></span>
+          <span><img src="assets/1A.png" alt="a"></span>
         </div>
-        <div class="trinca">
-          <span>t</span>
-          <span>r</span>
-          <span>i</span>
-          <span>n</span>
-          <span>c</span>
-          <span>a</span>
+        <div id="contador" class="contador">
+          <span>000</span>
+          <span>159</span>
         </div>
       </div>
       <ul id="midias" class="midia-grid">

@@ -1,9 +1,26 @@
 window.addEventListener("load", function () {
   console.log("Todos os recursos externos e conteúdo carregados.");
+  letras();
   drag_inicializar();
   interacao();
   centralizar();
 });
+
+function letras() {
+  const trinca = document.querySelectorAll("#trinca span img");
+  let T = Math.floor(Math.random()*2 + 1) + "T";
+  let R = Math.floor(Math.random()*2 + 1) + "R";
+  let I = Math.floor(Math.random()*2 + 1) + "I";
+  let N = Math.floor(Math.random()*2 + 1) + "N";
+  let C = Math.floor(Math.random()*2 + 1) + "C";
+  let A = Math.floor(Math.random()*2 + 1) + "A";
+  trinca[0].setAttribute("src", "assets/" + T + ".png");
+  trinca[1].setAttribute("src", "assets/" + R + ".png");
+  trinca[2].setAttribute("src", "assets/" + I + ".png");
+  trinca[3].setAttribute("src", "assets/" + N + ".png");
+  trinca[4].setAttribute("src", "assets/" + C + ".png");
+  trinca[5].setAttribute("src", "assets/" + A + ".png");
+}
 
 function centralizar() {
   let caixa = document.getElementById("caixa");
@@ -55,9 +72,10 @@ function drag_inicializar() {
 
 function interacao() {
   const imagens = document.querySelectorAll(".midia-grid li");
-  // let contador = 0;
-  // const contador_div = document.getElementById("contador");
-  // const total = imagens.length;
+  let contador = 0;
+  const contagem_valor = document.querySelectorAll("#contador span")[0];
+  const contagem_total = document.querySelectorAll("#contador span")[1];
+  contagem_total.innerText = imagens.length;
 
   for (const img of imagens) {
     
@@ -74,8 +92,8 @@ function interacao() {
 
       if (touchX >= elementoX && touchX <= elementoX + elementoWidth && touchY >= elementoY && touchY <= elementoY + elementoHeight) {
         if (!img.classList.contains("visivel")) {
-          // contador++;
-          // contador_div.innerText = contador + "/" + total;
+          contador++;
+          contagem_valor.innerText = String(contador).padStart(3, '0');
           img.classList.add("visivel");
         }
       }
@@ -83,8 +101,8 @@ function interacao() {
 
     img.addEventListener("mouseover", function () {
       if (!img.classList.contains("visivel")) {
-        // contador++;
-        // contador_div.innerText = contador + "/" + total;
+        contador++;
+        contagem_valor.innerText = String(contador).padStart(3, '0');
         img.classList.add("visivel");
       }
     });
