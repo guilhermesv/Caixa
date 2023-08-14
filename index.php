@@ -22,7 +22,7 @@
   <div id="caixa" class="site carregando">
     <div class="carregando-tela">
       <div id="carregando_status" class="carregando-status">
-        <div class="trevo">🍀</div>
+        <div class="trevo">☘️</div>
         <div>oi</div>
       </div>
     </div>
