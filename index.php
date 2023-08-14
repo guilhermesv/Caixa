@@ -39,12 +39,13 @@
         <span>acaso</span>
       </div>
       <div id="trinca" class="trinca">
-        <span><img src="assets/1T.png" alt="t"></span>
-        <span><img src="assets/1R.png" alt="r"></span>
-        <span><img src="assets/1I.png" alt="i"></span>
-        <span><img src="assets/1N.png" alt="n"></span>
-        <span><img src="assets/1C.png" alt="c"></span>
-        <span><img src="assets/1A.png" alt="a"></span>
+        <?php $n = rand(1, 2) ?>
+        <span><img src="<?php echo 'assets/' . $n . 'T.png'?>" alt="t"></span>
+        <span><img src="<?php echo 'assets/' . $n . 'R.png'?>" alt="r"></span>
+        <span><img src="<?php echo 'assets/' . $n . 'I.png'?>" alt="i"></span>
+        <span><img src="<?php echo 'assets/' . $n . 'N.png'?>" alt="n"></span>
+        <span><img src="<?php echo 'assets/' . $n . 'C.png'?>" alt="c"></span>
+        <span><img src="<?php echo 'assets/' . $n . 'A.png'?>" alt="a"></span>
       </div>
       <div id="contador" class="contador">
         <span>000</span>

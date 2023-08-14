@@ -25,7 +25,6 @@ carregando();
 
 window.addEventListener("load", function () {
   console.log("Todos os recursos externos e conteúdo carregados.");
-  letras();
   drag_inicializar();
   interacao();
   centralizar();
