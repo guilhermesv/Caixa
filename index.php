@@ -23,7 +23,7 @@
     <div class="carregando-tela">
       <div id="carregando_status" class="carregando-status">
         <div class="trevo">☘️</div>
-        <div>oi</div>
+        <div></div>
       </div>
     </div>
     <div class="informacoes">
@@ -39,7 +39,7 @@
         <span>acaso</span>
       </div>
       <div id="trinca" class="trinca">
-        <?php $n = rand(1, 2) ?>
+        <?php $n = rand(1, 3) ?>
         <span><img src="<?php echo 'assets/' . $n . 'T.png'?>" alt="t"></span>
         <span><img src="<?php echo 'assets/' . $n . 'R.png'?>" alt="r"></span>
         <span><img src="<?php echo 'assets/' . $n . 'I.png'?>" alt="i"></span>
