@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   overflow: hidden;
-  font-family: sans-serif;
+  font-family: monospace;
 }
 
 .site {
@@ -104,17 +104,6 @@ header {
   transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 600px) {
-  .midia-grid  {
-    width: 600vw;
-  }
-
-  .midia-grid .item-video,
-  .midia-grid .item-imagem {
-    max-width: 50vw;
-  }
-}
-
 
 .informacoes {
   pointer-events: none;
@@ -123,7 +112,7 @@ header {
   height: 100%;
   left: 0;
   top: 0;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   color: #fff;
 }
@@ -156,7 +145,7 @@ header {
 }
 
 .informacoes span{
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .informacoes .descricao span:nth-child(1) {
@@ -256,8 +245,21 @@ header {
 
 .informacoes .contador {
   font-family: serif;
+  font-style: italic;
+  font-size: 2rem;
 }
 
+.informacoes .contador span {
+  position: relative;
+}
+
+.informacoes .contador .contador-contagem {
+  bottom: -2.5rem;
+}
+
+.informacoes .contador .contador-total {
+  top: -2.5rem;
+}
 
 .informacoes .contador span:nth-child(1) {
   grid-area: C1;
@@ -271,4 +273,20 @@ header {
   text-align: center;
   align-self: baseline;
   padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+
+  .informacoes span{
+    padding: 1rem;
+  }
+
+  .midia-grid  {
+    width: 600vw;
+  }
+
+  .midia-grid .item-video,
+  .midia-grid .item-imagem {
+    max-width: 50vw;
+  }
 }

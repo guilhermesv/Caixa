@@ -8,7 +8,7 @@
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   <script src="js/main.js" defer></script>
   
-  <title>t.r.i.n.c.a.</title>
+  <title>T/R/I/N/C/A</title>
   <?php 
   
   $cores = ["#00c853", "#ff8a80", "#fff000"];
@@ -48,8 +48,8 @@
         <span><img src="<?php echo 'assets/' . $n . 'A.png'?>" alt="a"></span>
       </div>
       <div id="contador" class="contador">
-        <span>000</span>
-        <span>159</span>
+        <span class="contador-contagem">000</span>
+        <span class="contador-total">159</span>
       </div>
     </div>   
     <ul id="midias" class="midia-grid">
