@@ -11,10 +11,19 @@
   <title>T/R/I/N/C/A</title>
   <?php 
   
-  $cores = ["#00c853", "#ff8a80", "#fff000"];
-  $cor_selecionada = $cores[rand(0,2)];
+  $cores = ["#FF0000", "#FF6E00", "#0029FF", "#FF8A80", "#00C853", "#FFF000", "#000000"];
+  shuffle($cores);
 
-  echo '<style>body {background-color: ' . $cor_selecionada . '; }</style>';
+  $css = "";
+  $css .= '<style>';
+  $css .= ':root {';
+  $css .= '--cor-fundo: ' . $cores[0] . ';';
+  $css .= '--cor-texto: ' . $cores[1] . ';';
+  $css .= '--cor-imagem: ' . $cores[2] . ';}';
+  $css .= '</style>';
+  echo $css;
+
+  $trinca = rand(1, 3);
 
   ?>
 </head>
@@ -39,13 +48,12 @@
         <span>acaso</span>
       </div>
       <div id="trinca" class="trinca">
-        <?php $n = rand(1, 3) ?>
-        <span><img src="<?php echo 'assets/' . $n . 'T.png'?>" alt="t"></span>
-        <span><img src="<?php echo 'assets/' . $n . 'R.png'?>" alt="r"></span>
-        <span><img src="<?php echo 'assets/' . $n . 'I.png'?>" alt="i"></span>
-        <span><img src="<?php echo 'assets/' . $n . 'N.png'?>" alt="n"></span>
-        <span><img src="<?php echo 'assets/' . $n . 'C.png'?>" alt="c"></span>
-        <span><img src="<?php echo 'assets/' . $n . 'A.png'?>" alt="a"></span>
+        <span><img src="<?php echo 'assets/' . $trinca . 'T.png'?>" alt="t"></span>
+        <span><img src="<?php echo 'assets/' . $trinca . 'R.png'?>" alt="r"></span>
+        <span><img src="<?php echo 'assets/' . $trinca . 'I.png'?>" alt="i"></span>
+        <span><img src="<?php echo 'assets/' . $trinca . 'N.png'?>" alt="n"></span>
+        <span><img src="<?php echo 'assets/' . $trinca . 'C.png'?>" alt="c"></span>
+        <span><img src="<?php echo 'assets/' . $trinca . 'A.png'?>" alt="a"></span>
       </div>
       <div id="contador" class="contador">
         <span class="contador-contagem">000</span>

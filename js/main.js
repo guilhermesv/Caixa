@@ -11,7 +11,7 @@ function carregando() {
   //a function which updates your message in the page
   function contagem_atualizar() {
       var status = document.querySelectorAll("#carregando_status div")[1];
-      status.innerHTML = String(imagens_carregadas).padStart(3, '0') + ' /' + imagens_total;
+      status.innerHTML = String(imagens_carregadas).padStart(3, '0') + '/' + imagens_total;
   }
 
   //get # of images on page and attach the OnLoad event handler
