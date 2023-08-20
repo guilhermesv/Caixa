@@ -213,7 +213,6 @@ header {
 .informacoes .trinca img {
   width: 2rem;
   max-width: 100%;
-  filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg);
 }
 
 .informacoes .trinca span:nth-child(1) {
@@ -254,8 +253,7 @@ header {
 
 .informacoes .contador {
   font-family: serif;
-  font-style: italic;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .informacoes .contador span {

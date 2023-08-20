@@ -11,19 +11,20 @@
   <title>T/R/I/N/C/A</title>
   <?php 
   
-  $cores = ["#FF0000", "#FF6E00", "#0029FF", "#FF8A80", "#00C853", "#FFF000", "#000000"];
+  $cores = ["FF0000", "FF6E00", "0029FF", "FF8A80", "00C853", "FFF000", "000000"];
+  $letras =['T', 'R', 'I', 'N', 'C', 'A'];
   shuffle($cores);
 
   $css = "";
   $css .= '<style>';
   $css .= ':root {';
-  $css .= '--cor-fundo: ' . $cores[0] . ';';
-  $css .= '--cor-texto: ' . $cores[1] . ';';
-  $css .= '--cor-imagem: ' . $cores[2] . ';}';
+  $css .= '--cor-fundo: #' . $cores[0] . ';';
+  $css .= '--cor-texto: #' . $cores[1] . ';';
+  $css .= '--cor-imagem: #' . $cores[2] . ';}';
   $css .= '</style>';
   echo $css;
 
-  $trinca = rand(1, 3);
+  $modelo = rand(1, 3);
 
   ?>
 </head>
@@ -48,12 +49,12 @@
         <span>acaso</span>
       </div>
       <div id="trinca" class="trinca">
-        <span><img src="<?php echo 'assets/' . $trinca . 'T.png'?>" alt="t"></span>
-        <span><img src="<?php echo 'assets/' . $trinca . 'R.png'?>" alt="r"></span>
-        <span><img src="<?php echo 'assets/' . $trinca . 'I.png'?>" alt="i"></span>
-        <span><img src="<?php echo 'assets/' . $trinca . 'N.png'?>" alt="n"></span>
-        <span><img src="<?php echo 'assets/' . $trinca . 'C.png'?>" alt="c"></span>
-        <span><img src="<?php echo 'assets/' . $trinca . 'A.png'?>" alt="a"></span>
+        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'T.png'?>" alt="t"></span>
+        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'R.png'?>" alt="r"></span>
+        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'I.png'?>" alt="i"></span>
+        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'N.png'?>" alt="n"></span>
+        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'C.png'?>" alt="c"></span>
+        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'A.png'?>" alt="a"></span>
       </div>
       <div id="contador" class="contador">
         <span class="contador-contagem">000</span>
