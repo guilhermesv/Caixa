@@ -37,29 +37,30 @@
       </div>
     </div>
     <div class="informacoes">
-      <div class="descricao">
+        <!-- Descricao -->
         <span class="caixa">caixa</span>
-        <span class="é">é</span>
+        <span class="e">é</span>
         <span class="uma">uma</span>
         <span class="caverna">caverna</span>
-        <span class="de">de</span>
+        <div class="de">
+          <div class="contador-contagem">###</div>
+          <div>de</div>
+          <div class="contador-total">###</div>
+        </div>
         <span class="encontros">encontros</span>
         <span class="enviados">enviados</span>
         <span class="pelo">pelo</span>
         <span class="acaso">acaso</span>
-      </div>
-      <div id="trinca" class="trinca">
-        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'T.png'?>" alt="t"></span>
-        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'R.png'?>" alt="r"></span>
-        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'I.png'?>" alt="i"></span>
-        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'N.png'?>" alt="n"></span>
-        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'C.png'?>" alt="c"></span>
-        <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'A.png'?>" alt="a"></span>
-      </div>
-      <div id="contador" class="contador">
-        <span class="contador-contagem">000</span>
-        <span class="contador-total">159</span>
-      </div>
+
+        <!-- Trinca -->
+        <span class="T"><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'T.png'?>" alt="t"></span>
+        <span class="R"><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'R.png'?>" alt="r"></span>
+        <span class="I"><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'I.png'?>" alt="i"></span>
+        <span class="N"><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'N.png'?>" alt="n"></span>
+        <span class="C"><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'C.png'?>" alt="c"></span>
+        <span class="A"><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'A.png'?>" alt="a"></span>
+        
+      
     </div>   
     <ul id="midias" class="midia-grid">
       <?php include("galeria.php"); ?>

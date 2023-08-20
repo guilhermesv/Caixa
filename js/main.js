@@ -30,22 +30,6 @@ window.addEventListener("load", function () {
   centralizar();
 });
 
-function letras() {
-  const trinca = document.querySelectorAll("#trinca span img");
-  let T = Math.floor(Math.random()*2 + 1) + "T";
-  let R = Math.floor(Math.random()*2 + 1) + "R";
-  let I = Math.floor(Math.random()*2 + 1) + "I";
-  let N = Math.floor(Math.random()*2 + 1) + "N";
-  let C = Math.floor(Math.random()*2 + 1) + "C";
-  let A = Math.floor(Math.random()*2 + 1) + "A";
-  trinca[0].setAttribute("src", "assets/" + T + ".png");
-  trinca[1].setAttribute("src", "assets/" + R + ".png");
-  trinca[2].setAttribute("src", "assets/" + I + ".png");
-  trinca[3].setAttribute("src", "assets/" + N + ".png");
-  trinca[4].setAttribute("src", "assets/" + C + ".png");
-  trinca[5].setAttribute("src", "assets/" + A + ".png");
-}
-
 function centralizar() {
   let caixa = document.getElementById("caixa");
   let midias = document.getElementById("midias");
@@ -97,8 +81,8 @@ function drag_inicializar() {
 function interacao() {
   const imagens = document.querySelectorAll(".midia-grid li");
   let contador = 0;
-  const contagem_valor = document.querySelectorAll("#contador span")[0];
-  const contagem_total = document.querySelectorAll("#contador span")[1];
+  const contagem_valor = document.querySelector(".contador-contagem");
+  const contagem_total = document.querySelector(".contador-total");
   contagem_total.innerText = imagens.length;
 
   for (const img of imagens) {

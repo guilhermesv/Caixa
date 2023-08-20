@@ -123,16 +123,6 @@ header {
   font-size: 1.3rem;
   text-transform: uppercase;
   color: var(--cor-texto);
-}
-
-.informacoes .descricao,
-.informacoes .trinca,
-.informacoes .contador {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -156,130 +146,126 @@ header {
   padding: 2rem;
 }
 
-.informacoes .descricao span:nth-child(1) {
+/* Descrição */
+
+.informacoes .caixa {
   grid-area: A0;
   text-align: left;
   align-self: start;
 }
 
-.informacoes .descricao span:nth-child(2) {
+.informacoes .e {
   grid-area: C0;
   text-align: center;
   align-self: start;
 }
 
-.informacoes .descricao span:nth-child(3) {
+.informacoes .uma {
   grid-area: E0;
   text-align: right;
   align-self: start;
 }
 
-.informacoes .descricao span:nth-child(4) {
+.informacoes .caverna {
   grid-area: A2;
   text-align: left;
   align-self: center;
 }
 
-.informacoes .descricao span:nth-child(5) {
+.informacoes .de {
   grid-area: C2;
   text-align: center;
   align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.informacoes .descricao span:nth-child(6) {
+.informacoes .encontros {
   grid-area: E2;
   text-align: right;
   align-self: center;
 }
 
-.informacoes .descricao span:nth-child(7) {
+.informacoes .enviados {
   grid-area: A4;
   text-align: left;
   align-self: end;
 }
 
-.informacoes .descricao span:nth-child(8) {
+.informacoes .pelo {
   grid-area: C4;
   text-align: center;
   align-self: end;
 }
 
-.informacoes .descricao span:nth-child(9) {
+.informacoes .acaso {
   grid-area: E4;
   text-align: right;
   align-self: end;
 }
+
+/* Trinca */
 
 .informacoes .trinca img {
   width: 2rem;
   max-width: 100%;
 }
 
-.informacoes .trinca span:nth-child(1) {
+.informacoes .T {
   grid-area: B0;
   text-align: center;
   align-self: end;
 }
 
-.informacoes .trinca span:nth-child(2) {
+.informacoes .R {
   grid-area: D0;
   text-align: center;
   align-self: end;
 }
 
-.informacoes .trinca span:nth-child(3) {
+.informacoes .I {
   grid-area: B2;
   text-align: center;
   align-self: center;
 }
 
-.informacoes .trinca span:nth-child(4) {
+.informacoes .N {
   grid-area: D2;
   text-align: center;
   align-self: center;
 }
 
-.informacoes .trinca span:nth-child(5) {
+.informacoes .C {
   grid-area: B4;
   text-align: center;
   align-self: start;
 }
 
-.informacoes .trinca span:nth-child(6) {
+.informacoes .A {
   grid-area: D4;
   text-align: center;
   align-self: start;
 }
 
-.informacoes .contador {
-  font-family: serif;
-  font-size: 1.8rem;
-}
+/* Contador  */
 
-.informacoes .contador span {
+.informacoes .contador-contagem,
+.informacoes .contador-total {
   position: relative;
+  font-family: serif;
+  font-size: 1.4rem;
 }
 
-.informacoes .contador .contador-contagem {
-  bottom: -2.5rem;
-}
-
-.informacoes .contador .contador-total {
-  top: -2.5rem;
-}
-
-.informacoes .contador span:nth-child(1) {
-  grid-area: C1;
+.informacoes .contador-contagem {
   text-align: center;
-  align-self: end;
-  padding: 0;
+  margin-bottom: -0.5rem;
 }
 
-.informacoes .contador span:nth-child(2) {
-  grid-area: C3;
+.informacoes .contador-total {
   text-align: center;
-  align-self: baseline;
-  padding: 0;
+  margin-top: -0.5rem;
+
 }
 
 @media screen and (max-width: 600px) {
