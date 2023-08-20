@@ -38,15 +38,15 @@
     </div>
     <div class="informacoes">
       <div class="descricao">
-        <span>caixa</span>
-        <span>é</span>
-        <span>uma</span>
-        <span>caverna</span>
-        <span>de</span>
-        <span>encontros</span>
-        <span>enviados</span>
-        <span>pelo</span>
-        <span>acaso</span>
+        <span class="caixa">caixa</span>
+        <span class="é">é</span>
+        <span class="uma">uma</span>
+        <span class="caverna">caverna</span>
+        <span class="de">de</span>
+        <span class="encontros">encontros</span>
+        <span class="enviados">enviados</span>
+        <span class="pelo">pelo</span>
+        <span class="acaso">acaso</span>
       </div>
       <div id="trinca" class="trinca">
         <span><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'T.png'?>" alt="t"></span>
