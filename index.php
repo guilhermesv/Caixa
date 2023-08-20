@@ -43,9 +43,9 @@
         <span class="uma">uma</span>
         <span class="caverna">caverna</span>
         <div class="de">
-          <div class="contador-contagem">###</div>
+          <div class="contador-contagem">000</div>
           <div>de</div>
-          <div class="contador-total">###</div>
+          <div class="contador-total">160</div>
         </div>
         <span class="encontros">encontros</span>
         <span class="enviados">enviados</span>
