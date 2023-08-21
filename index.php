@@ -11,7 +11,7 @@
   <title>T/R/I/N/C/A</title>
   <?php 
   
-  $cores = ["FF0000", "FF6E00", "0029FF", "FF8A80", "00C853", "FFF000", "000000"];
+  $cores = ["FF0000", "FF6E00", "0029FF", "FF8A80", "00C853", "FFF000"];
   $letras =['T', 'R', 'I', 'N', 'C', 'A'];
   shuffle($cores);
 
@@ -20,7 +20,7 @@
   $css .= ':root {';
   $css .= '--cor-fundo: #' . $cores[0] . ';';
   $css .= '--cor-texto: #' . $cores[1] . ';';
-  $css .= '--cor-imagem: #' . $cores[2] . ';}';
+  $css .= '--cor-imagem: #000' . ';}';
   $css .= '</style>';
   echo $css;
 
@@ -38,19 +38,19 @@
     </div>
     <div class="informacoes">
         <!-- Descricao -->
-        <span class="caixa">caixa</span>
-        <span class="e">é</span>
-        <span class="uma">uma</span>
-        <span class="caverna">caverna</span>
+        <span class="caixa frase">caixa</span>
+        <span class="e frase">é</span>
+        <span class="uma frase">uma</span>
+        <span class="caverna frase">caverna</span>
         <div class="de">
           <div class="contador-contagem">000</div>
           <div>de</div>
           <div class="contador-total">160</div>
         </div>
-        <span class="encontros">encontros</span>
-        <span class="enviados">enviados</span>
-        <span class="pelo">pelo</span>
-        <span class="acaso">acaso</span>
+        <span class="encontros frase">encontros</span>
+        <span class="enviados frase">enviados</span>
+        <span class="pelo frase">pelo</span>
+        <span class="acaso frase">acaso</span>
 
         <!-- Trinca -->
         <span class="T"><img src="<?php echo 'assets/' . $cores[1] . '_' . $modelo . '_' .'T.png'?>" alt="t"></span>

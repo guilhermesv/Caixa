@@ -142,8 +142,8 @@ header {
   transition: opacity ease-in 1s;
 }
 
-.informacoes span{
-  padding: 2rem;
+.informacoes .frase{
+  padding: 1.5rem;
 }
 
 /* Descrição */
@@ -208,6 +208,7 @@ header {
 /* Trinca */
 
 .informacoes img {
+  min-width: 20px;
   width: 2rem;
   max-width: 100%;
 }
@@ -270,7 +271,7 @@ header {
 
 @media screen and (max-width: 600px) {
 
-  .informacoes span{
+  .informacoes .frase{
     padding: 1rem;
   }
 
@@ -282,4 +283,14 @@ header {
   .midia-grid .item-imagem {
     max-width: 50vw;
   }
+
+  .informacoes {
+    font-size: 1rem;
+  }
+
+  .informacoes .contador-contagem,
+  .informacoes .contador-total {
+    font-size: 1.2rem;
+  }
+
 }
