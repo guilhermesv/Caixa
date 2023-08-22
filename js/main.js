@@ -117,3 +117,14 @@ function interacao() {
 
   }
 }
+
+function exibir_todas() {
+  const imagens = document.querySelectorAll(".midia-grid li");
+
+  imagens.forEach(img => {
+    if (!img.classList.contains("visivel")) {
+      img.classList.add("visivel");
+    }
+  });
+
+}

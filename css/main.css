@@ -209,8 +209,8 @@ header {
 
 .informacoes img {
   min-width: 20px;
-  width: 2rem;
-  max-width: 100%;
+  width: 70%;
+  max-width: 2rem;
 }
 
 .informacoes .T {
@@ -290,7 +290,25 @@ header {
 
   .informacoes .contador-contagem,
   .informacoes .contador-total {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
+}
+
+@media print {
+  html, body, .site {
+    overflow: visible;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .informacoes .contador-contagem,
+  .informacoes .contador-total {
+    display: none;
+  }
+
+}
+
+@page {
+  margin: 1cm;
 }
