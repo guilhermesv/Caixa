@@ -118,13 +118,23 @@ function interacao() {
   }
 }
 
-function exibir_todas() {
+function exibir_todas(exibir = true) {
   const imagens = document.querySelectorAll(".midia-grid li");
 
-  imagens.forEach(img => {
-    if (!img.classList.contains("visivel")) {
-      img.classList.add("visivel");
-    }
-  });
+  if(exibir) {
+    imagens.forEach(img => {
+      if (!img.classList.contains("visivel")) {
+        img.classList.add("visivel");
+      }
+    });
+  }
+
+  if(!exibir) {
+    imagens.forEach(img => {
+      if (img.classList.contains("visivel")) {
+        img.classList.remove("visivel");
+      }
+    });
+  }
 
 }
