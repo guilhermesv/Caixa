@@ -1,3 +1,28 @@
+function carregando() {
+  let imagens_total = 0;
+  var imagens_carregadas = 0;
+
+  //a function to execute when each image is loaded ("event handler")
+  function imagem_carregada() {
+      imagens_carregadas++;
+      contagem_atualizar();
+  }
+
+  //a function which updates your message in the page
+  function contagem_atualizar() {
+      var status = document.querySelectorAll("#carregando_status div")[1];
+      status.innerHTML = String(imagens_carregadas).padStart(3, '0') + '/' + imagens_total;
+  }
+
+  //get # of images on page and attach the OnLoad event handler
+  var imagens = document.getElementsByTagName('img');
+  imagens_total = imagens.length;
+  for(var i=0;i<imagens.length;i++) {
+    imagens[i].onload = imagem_carregada;
+  }
+}
+carregando();
+
 window.addEventListener("load", function () {
   console.log("Todos os recursos externos e conteúdo carregados.");
   drag_inicializar();
@@ -56,8 +81,9 @@ function drag_inicializar() {
 function interacao() {
   const imagens = document.querySelectorAll(".midia-grid li");
   let contador = 0;
-  const contador_div = document.getElementById("contador");
-  const total = imagens.length;
+  const contagem_valor = document.querySelector(".contador-contagem");
+  const contagem_total = document.querySelector(".contador-total");
+  contagem_total.innerText = imagens.length;
 
   for (const img of imagens) {
     
@@ -75,7 +101,7 @@ function interacao() {
       if (touchX >= elementoX && touchX <= elementoX + elementoWidth && touchY >= elementoY && touchY <= elementoY + elementoHeight) {
         if (!img.classList.contains("visivel")) {
           contador++;
-          contador_div.innerText = contador + "/" + total;
+          contagem_valor.innerText = String(contador).padStart(3, '0');
           img.classList.add("visivel");
         }
       }
@@ -84,10 +110,31 @@ function interacao() {
     img.addEventListener("mouseover", function () {
       if (!img.classList.contains("visivel")) {
         contador++;
-        contador_div.innerText = contador + "/" + total;
+        contagem_valor.innerText = String(contador).padStart(3, '0');
         img.classList.add("visivel");
       }
     });
 
   }
+}
+
+function exibir_todas(exibir = true) {
+  const imagens = document.querySelectorAll(".midia-grid li");
+
+  if(exibir) {
+    imagens.forEach(img => {
+      if (!img.classList.contains("visivel")) {
+        img.classList.add("visivel");
+      }
+    });
+  }
+
+  if(!exibir) {
+    imagens.forEach(img => {
+      if (img.classList.contains("visivel")) {
+        img.classList.remove("visivel");
+      }
+    });
+  }
+
 }
