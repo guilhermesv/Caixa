@@ -2,7 +2,8 @@
   --cor-fundo: "yellow";
   --cor-texto: "green";
   --cor-imagem: "black";
-}
+  color-scheme: only light;
+ }
 
 html, body {
   height: 100%;
@@ -102,6 +103,18 @@ html, body {
 .midia-grid li video {
   width: 100%;
   max-width: 423px;
+}
+
+.midia-grid .item-audio {
+  height: 400px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.midia-grid .item-audio audio {
+  width: 100%;
 }
 
 header {
